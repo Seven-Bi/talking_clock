@@ -26,13 +26,13 @@
         "50": "fifty"
     },
     "time_data_test": {
-        "00:00": "It is twelve:zero am",
-        "01:30": "It is one:thirty am",
-        "12:05": "It is twelve:five pm",
-        "14:02": "It is two:two pm",
-        "23:59": "It is eleven:fifty nine pm",
-        "12:00": "It is twelve:zero pm",
-        "24:00": "It is twelve:zero am"
+        "00:00": "It is twelve zero am",
+        "01:30": "It is one thirty am",
+        "12:05": "It is twelve five pm",
+        "14:02": "It is two two pm",
+        "23:59": "It is eleven fifty nine pm",
+        "12:00": "It is twelve zero pm",
+        "24:00": "It is twelve zero am"
     },
     "time_data_exp_test": {
         "-24:-10": "-2",

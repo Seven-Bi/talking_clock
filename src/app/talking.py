@@ -58,7 +58,9 @@ def num_to_word(input_str):
         temp_hours = int(hours)
         hours = str(temp_hours % 12)
 
-    
+    if int(hours) % 12 == 0:
+        hours = '12'
+        
     hours = transfer_dict[hours]
 
     if int(mins) // 20 > 0 and int(mins) != 30 and int(mins) != 40 and int(mins) != 50:
@@ -69,6 +71,6 @@ def num_to_word(input_str):
         temp_mins = int(mins)
         mins = str(temp_mins)
         mins = transfer_dict[mins]
-    output_str = 'It is '  + hours + ':' + mins + ' ' + daytime
+    output_str = 'It is '  + hours + ' ' + mins + ' ' + daytime
 
     return output_str
