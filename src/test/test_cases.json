@@ -30,11 +30,12 @@
         "01:30": "It is one thirty am",
         "12:05": "It is twelve zero five pm",
         "14:02": "It is two zero two pm",
+        "20:15": "It is eight fifteen pm",
         "23:59": "It is eleven fifty nine pm",
         "12:00": "It is twelve o clock pm",
         "24:00": "It is twelve o clock am"
     },
-    "time_data_exp_test": {
+    "time_data_error_test": {
         "-24:-10": "-2",
         "abc123": "-2",
         "1234:5678": "-2"
