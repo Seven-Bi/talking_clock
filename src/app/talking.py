@@ -66,11 +66,14 @@ def num_to_word(input_str):
     if int(mins) // 20 > 0 and int(mins) != 30 and int(mins) != 40 and int(mins) != 50:
         mins = transfer_dict[mins[0]+'0'] + ' ' + transfer_dict[mins[1]]
     else:
-        if mins == '00':
-            mins = '0'
-        temp_mins = int(mins)
-        mins = str(temp_mins)
-        mins = transfer_dict[mins]
+        if int(mins) // 10 < 1:
+            if mins == '00':
+                mins = 'o clock'
+            else:
+                mins = transfer_dict[mins[0]] + ' ' + transfer_dict[mins[1]]
+        else:
+            mins = transfer_dict[mins]
+            
     output_str = 'It is '  + hours + ' ' + mins + ' ' + daytime
 
     return output_str
