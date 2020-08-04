@@ -1,6 +1,8 @@
+import sys
 import unittest
 import json
-from talking_clock.src.app.talking_clock import number_word_dict
+sys.path.append('..')
+from app.talking import number_word_dict
 
 
 class TestTalkingClock(unittest.TestCase):
