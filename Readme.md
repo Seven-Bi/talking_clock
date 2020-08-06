@@ -19,6 +19,7 @@ Add seconds traslation and naive UI
 
 #### How to run it
 For run: python main.py
+
 For test: python test/my_test.py -v
 
 ---
