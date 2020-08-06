@@ -22,4 +22,4 @@ For run: python main.py
 For test: python test/my_test.py -v
 
 ---
-![Screenshot](https://github.com/Seven-Bi/talking_clock/tree/master/img/page.png)
+![Screenshot](https://raw.githubusercontent.com/Seven-Bi/talking_clock/master/img/page.PNG)
