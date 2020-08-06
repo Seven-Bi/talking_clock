@@ -26,18 +26,18 @@
         "50": "fifty"
     },
     "time_data_test": {
-        "00:00": "It is twelve o clock am",
-        "01:30": "It is one thirty am",
-        "12:05": "It is twelve zero five pm",
-        "14:02": "It is two zero two pm",
-        "20:15": "It is eight fifteen pm",
-        "23:59": "It is eleven fifty nine pm",
-        "12:00": "It is twelve o clock pm",
-        "24:00": "It is twelve o clock am"
+        "00:00:00": "It is twelve o clock and zero seconds am",
+        "01:30:12": "It is one thirty and twelve seconds am",
+        "12:05:45": "It is twelve zero five and fourty five seconds pm",
+        "14:02:30": "It is two zero two and thirty seconds pm",
+        "20:15:15": "It is eight fifteen and fifteen seconds pm",
+        "23:59:59": "It is eleven fifty nine and fifty nine seconds pm",
+        "12:00:00": "It is twelve o clock and zero seconds pm",
+        "24:00:00": "It is twelve o clock and zero seconds am"
     },
     "time_data_error_test": {
-        "-24:-10": "-2",
-        "abc123": "-2",
+        "-24:-10:0": "-2",
+        "abc123::": "-2",
         "1234:5678": "-2"
     }
 }

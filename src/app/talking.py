@@ -1,5 +1,6 @@
 import re
 
+
 # making a dict for later number to word translating
 def number_word_dict():
     transfer_dict = {}
@@ -31,9 +32,9 @@ def num_to_word(input_str):
     output_str = ''
 
     # regex to filter input data
-    regex_pattern = '([0-1][0-9]|[2][0-4]):[0-5][0-9]'
+    regex_pattern = '([0-1][0-9]|[2][0-4]):[0-5][0-9]:[0-5][0-9]'
     p = re.compile(regex_pattern)
-    fix_len = 5
+    fix_len = 8
     # create the dict
     transfer_dict = number_word_dict()
 
@@ -42,13 +43,14 @@ def num_to_word(input_str):
         return '-1'
 
     # parameter validation(format and len check)
-    if p.match(input_str) == False or len(input_str) != fix_len:
+    if bool(p.match(input_str.strip())) == False or len(input_str.strip()) != fix_len:
         return '-2'
     
     # splitting hours and minutes
     input_list = input_str.split(':')
     hours = input_list[0]
     mins = input_list[1]
+    secs = input_list[2]
 
     # indicate am / pm according to input time
     daytime = 'am'
@@ -80,7 +82,19 @@ def num_to_word(input_str):
                 mins = transfer_dict[mins[0]] + ' ' + transfer_dict[mins[1]]
         else:
             mins = transfer_dict[mins]
+
+    if int(secs) // 20 > 0 and int(secs) != 30 and int(secs) != 40 and int(secs) != 50:
+        secs = transfer_dict[secs[0]+'0'] + ' ' + transfer_dict[secs[1]]
+    else:
+        if int(secs) // 10 < 1:
+            # for handling mins which is '00'
+            if secs == '00':
+                secs = 'zero'
+            else:
+                secs = transfer_dict[secs[0]] + ' ' + transfer_dict[secs[1]]
+        else:
+            secs = transfer_dict[secs]
             
-    output_str = 'It is '  + hours + ' ' + mins + ' ' + daytime
+    output_str = 'It is '  + hours + ' ' + mins + ' and ' + secs + ' seconds ' + daytime
 
     return output_str

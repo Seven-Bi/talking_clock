@@ -13,7 +13,13 @@ It will be fully powered by Python and of course has main the functionality "Tal
 ##### Same day 4:55 pm
 Implemented the main functionality and passed all predefined test cases, still missing the UI, will add it later.
 
+##### D2
+Add seconds traslation and naive UI
+
 
 #### How to run it
-All the test data can be view/edit/add in test_cases.json file.
-Then simply run command ' python my_test.py -v ' 
+For run: python main.py
+For test: python test/my_test.py -v
+
+---
+![Screenshot](https://github.com/Seven-Bi/talking_clock/tree/master/img/page.png)
